@@ -23,7 +23,8 @@
     "typings/browser.d.ts"
   ],
   "files": [
-    "src/index.ts"
+    "src/index.ts",
+    "typings/browser.d.ts"
   ],
   "atom": {
     "rewriteTsconfig": true
