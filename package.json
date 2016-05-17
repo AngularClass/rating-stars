@@ -4,7 +4,10 @@
   "description": "Angular 2 component for rating stars",
   "main": "rating-stars.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "build-dev": "webpack",
+    "build-prod": "export NODE_ENV=production; webpack",
+    "build": "npm run build-dev & npm run build-prod"
   },
   "repository": {
     "type": "git",
@@ -31,8 +34,10 @@
     "@angular/core": "^2.0.0-rc.1",
     "awesome-typescript-loader": "^0.17.0",
     "npm-bump": "0.0.18",
+    "rxjs": "^5.0.0-beta.7",
     "tslint": "^3.10.2",
     "typescript": "^1.8.10",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "zone.js": "^0.6.12"
   }
 }
