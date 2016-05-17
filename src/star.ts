@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ac-star',
-  template: `<span class="star" [class.active]="active">&#9733;</span>`,
+  template: `<span class="star" [class.active]="active" (click)="handleRate($event)">&#9733;</span>`,
   styles: [`
     .star {
       color: #efefef;
@@ -14,4 +14,9 @@ import { Component, Input } from '@angular/core';
 })
 export class AcStar {
   @Input() active;
+  @Output() rate = new EventEmitter();
+
+  handleRate(e) {
+    this.rate.emit(e);
+  }
 }
