@@ -5,8 +5,14 @@ var webpack = require('webpack');
 var defaultConfig = {
   entry: './src/index.ts',
   output: {
-    path:  __dirname
+    path:  __dirname + '/dist',
+    library: 'rating-stars',
+    libraryTarget: 'umd',
+    filename: 'rating-stars.js'
   },
+
+  debug: true,
+  devtool: '#source-maps',
 
   resolve: {
     extensions: ['', '.ts', '.js']
@@ -28,6 +34,10 @@ var defaultConfig = {
     'zone.js': {
       commonjs: 'zone.js',
       commonjs2: 'zone.js'
+    },
+    'lodash': {
+      'commonjs': 'lodash',
+      'commonjs2': 'lodash'
     }
   },
 
@@ -47,4 +57,4 @@ var defaultConfig = {
   }
 };
 
-module.exports = Object.assign({}, defaultConfig, config);
+module.exports = defaultConfig;
