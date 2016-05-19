@@ -1,6 +1,7 @@
 module.exports = {
   debug: true,
+  devtool: '#source-maps',
   output: {
-    filename: 'review-stars.js'
+    filename: 'rating-stars.js'
   }
 };
