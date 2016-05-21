@@ -1,6 +1,14 @@
+Error.stackTraceLimit = Infinity;
+
 require('core-js');
-require('zone.js');
-require('rx/Rx');
+require('ts-helpers');
+require('zone.js/dist/zone');
+require('zone.js/dist/long-stack-trace-zone');
+require('zone.js/dist/jasmine-patch');
+require('zone.js/dist/async-test');
+require('zone.js/dist/fake-async-test');
+require('zone.js/dist/sync-test');
+require('rxjs/Rx');
 
 const testing = require('@angular/core/testing');
 const browser = require('@angular/platform-browser-dynamic/testing');
@@ -12,6 +20,6 @@ testing.setBaseTestProviders(
 
 Object.assign(global, testing);
 
-const context = require.context('./src', true, /\.spec\.ts/)
+const context = require.context('./src', true, /\.spec\.ts/);
 
 context.keys().forEach(context);

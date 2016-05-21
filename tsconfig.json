@@ -13,23 +13,15 @@
   "compileOnSave": false,
   "buildOnSave": false,
   "exclude": [
-    "node_modules",
-    "typings/main",
-    "typings/main.d.ts"
+    "node_modules"
   ],
   "filesGlob": [
     "src/**/*.ts",
     "!node_modules/**/*.**",
-    "!typings/main.d.ts",
-    "typings/browser.d.ts"
+    "typings/index.d.ts"
   ],
-  "files": [
-    "src/index.ts",
-    "src/star.ts",
-    "src/stars.ts",
-    "typings/browser.d.ts"
-  ],
+
   "atom": {
-    "rewriteTsconfig": true
+    "rewriteTsconfig": false
   }
 }

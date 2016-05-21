@@ -4,7 +4,7 @@ const DefinePlugin = require('webpack/lib/DefinePlugin');
 /**
  * Webpack Constants
  */
-const ENV = process.env.ENV = process.env.NODE_ENV = 'testing';
+const ENV = process.env.ENV = process.env.NODE_ENV = 'test';
 
 /**
  * Webpack configuration
@@ -61,11 +61,11 @@ module.exports = {
        *
        * See: https://github.com/wbuchwalter/tslint-loader
        */
-      {
-        test: /\.ts$/,
-        loader: 'tslint-loader',
-        exclude: ['node_modules']
-      }
+      // {
+      //   test: /\.ts$/,
+      //   loader: 'tslint-loader',
+      //   exclude: ['node_modules']
+      // }
 
     ],
 
