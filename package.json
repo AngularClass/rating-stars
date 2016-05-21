@@ -2,7 +2,7 @@
   "name": "@ac/rating-stars",
   "version": "0.0.1",
   "description": "Angular 2 component for rating stars",
-  "main": "rating-stars.js",
+  "main": "dist/rating-stars.js",
   "scripts": {
     "test": "npm test",
     "build-dev": "webpack",
@@ -41,5 +41,5 @@
     "webpack": "^1.13.0",
     "zone.js": "^0.6.12"
   },
-  "typings": "./src/index.d.ts"
+  "typings": "./dist/src/index.d.ts"
 }

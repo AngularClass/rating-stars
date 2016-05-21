@@ -9,6 +9,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       color: #efefef;
       cursor: pointer;
       font-size: 2rem;
+      transition: color .4s ease-in-out;
     }
     .star.active {
       color: #FFD600;
