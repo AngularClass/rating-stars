@@ -1,8 +1,9 @@
 var ENV = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var config = require('./webpack/' + ENV + '.config');
 var webpack = require('webpack');
+var merge = require('lodash/merge');
 
-var defaultConfig = {
+var config = {
   entry: './src/index.ts',
   output: {
     path:  __dirname + '/dist',
@@ -57,4 +58,4 @@ var defaultConfig = {
   }
 };
 
-module.exports = defaultConfig;
+module.exports = merge(config, require('./webpack/' + ENV + '.config'));
