@@ -21,13 +21,14 @@ export class AcStars {
   @Input() rating: number;
   @Output() rate = new EventEmitter();
   stars:number[];
-  _rating = this.rating;
+  _rating:number;
 
   constructor() {
   }
   ngOnInit() {
     const count = this.starCount || 5;
     this.stars = Array.from(Array(count), (e, i) => i + 1);
+    this._rating = this.rating;
   }
 
   onRate(star) {
